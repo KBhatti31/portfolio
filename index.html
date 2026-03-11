@@ -26,6 +26,45 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    * { cursor: none; }
+    
+    body {
+      background: #e8f4fd;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Chota dot */
+    #dot {
+      width: 8px;
+      height: 8px;
+      background: #222;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: opacity 0.15s;
+    }
+
+    /* Bada ring/circle */
+    #ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid #888;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9998;
+      transition: left 0.12s ease, top 0.12s ease, opacity 0.15s;
+    }
+
+    #dot.hidden, #ring.hidden {
+      opacity: 0;
+    }
+  </style>
 
 </head>
 
@@ -1342,11 +1381,41 @@
     </div>
 
   </footer>
-
+  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <!-- Vendor JS Files -->
+   <div id="dot"></div>
+  <div id="ring"></div>
+
+  <script>
+    const dot = document.getElementById('dot');
+    const ring = document.getElementById('ring');
+
+    document.addEventListener('mousemove', (e) => {
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      ring.style.left = e.clientX + 'px';
+      ring.style.top = e.clientY + 'px';
+    });
+
+    // Sirf cursor show/hide — koi styling nahi
+    document.addEventListener('mouseover', (e) => {
+      const el = e.target;
+      const isClickable = el.matches('a, button, input, select, textarea, [role="button"]')
+        || window.getComputedStyle(el).cursor === 'pointer';
+
+      if (isClickable) {
+        dot.classList.add('hidden');
+        ring.classList.add('hidden');
+        el.style.cursor = 'pointer';
+      } else {
+        dot.classList.remove('hidden');
+        ring.classList.remove('hidden');
+        el.style.cursor = 'none';
+      }
+    });
+  </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
