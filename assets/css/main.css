@@ -36,7 +36,7 @@
   --nav-mobile-background-color: #11427d; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #F59E0B; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #acc4e0; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #1E293B; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #f59e0b; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -237,7 +237,8 @@ h6 {
   justify-content: center;
   padding: 0;
   background: color-mix(in srgb, var(--contrast-color), transparent 90%);
-  color: var(--contrast-color);
+  color: #F1F5F9;
+  border: solid 0.5px;
   margin: 0 2px;
   border-radius: 50%;
   width: 40px;
@@ -250,7 +251,7 @@ h6 {
 }
 
 .navmenu .social-links a:hover {
-  color: var(--contrast-color);
+  color: #F1F5F9;
   background: var(--accent-color);
 }
 
@@ -266,7 +267,7 @@ h6 {
 
 .navmenu a,
 .navmenu a:focus {
-  color: var(--nav-dropdown-color);
+  color: #F1F5F9;
   padding: 10px 20px;
   font-family: var(--nav-font);
   font-size: 17px;
@@ -324,7 +325,7 @@ h6 {
 
 .navmenu .dropdown>.dropdown-active {
   display: block;
-  background-color: var(--nav-dropdown-background-color);
+  background-color: #1E293B;
   border: 1px solid color-mix(in srgb, var(--nav-dropdown-color), transparent 90%);
 }
 
@@ -343,7 +344,7 @@ h6 {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: var(--nav-mobile-background-color);
+  background-color: #1E293B;
   transition: 0.3s;
 }
 
@@ -381,7 +382,7 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
+  color: #F1F5F9;
   border-color: var(--accent-color);
 }
 
@@ -1666,7 +1667,7 @@ section,
 
 .services .service-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px -5px rgba(245, 159, 11, 0.438);
 }
 
 .services .service-item:hover::before {
@@ -1870,7 +1871,7 @@ section,
 }
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
-  color: var(--contrast-color);
+  /* color: var(--contrast-color); */
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 20px;
