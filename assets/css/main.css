@@ -50,7 +50,7 @@
   --background-color: #F59E0B;
   --default-color: #1E293B;
   --heading-color: #1E293B;
-  --accent-color: #afcdf1;
+  --accent-color: #f7f7f7;
   --surface-color: #2973cc;
   --contrast-color: #1E293B;
 }
@@ -351,7 +351,7 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
+  color: #f7faff;
   background-color: var(--background-color);
   font-size: 14px;
   padding: 40px 0;
@@ -2331,14 +2331,14 @@ section,
 --------------------------------------------------------------*/
 .contact .info-box {
   background-color: var(--accent-color);
-  color: var(--contrast-color);
+  color: #F1F5F9;
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
 }
 
 .contact .info-box h3 {
-  color: var(--contrast-color);
+  color: #f7faff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -2377,7 +2377,7 @@ section,
 .contact .info-item .icon-box {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  background-color: color-mix(in srgb, #f7faff, #fff 85%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2396,7 +2396,7 @@ section,
 }
 
 .contact .info-item .content h4 {
-  color: var(--contrast-color);
+  color: #f7faff;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
