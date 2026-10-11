@@ -732,7 +732,6 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 30px;
 }
 
 @media (max-width: 991px) {
