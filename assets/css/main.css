@@ -521,7 +521,6 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 120px 0;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
